@@ -24,3 +24,4 @@ gerenciador.Registrar(pedro);
 gerenciador.Registrar(roberta);
 
 Console.WriteLine("Total de bonificações: "+gerenciador.TotalDeBonificacoes);
+Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
