@@ -11,19 +11,26 @@ namespace bytebank_ADM.Funcionarios
 
         public string Nome { get; set; }
         public string Cpf { get; private set; }
-        public double Salario { get; set; }
+        public double Salario { get; protected set; }
         public static int TotalDeFuncionarios { get; private set; }
 
-        public Funcionario(string cpg)
+        public Funcionario(string cpf, double salario)
         {
-            this.Cpf = Cpf;
+            this.Salario = salario;
+            this.Cpf = cpf;
             TotalDeFuncionarios++;
-            // Console.WriteLine("Criando um funcionário");
         }
 
         public virtual double GetBonificacao()
         {
             return this.Salario * 0.1;
+        }
+
+        public virtual void AumentaSalario()
+        {
+
+            this.Salario *= 1.1;
+
         }
 
 
