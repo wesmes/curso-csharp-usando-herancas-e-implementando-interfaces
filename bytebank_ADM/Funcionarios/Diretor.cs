@@ -9,6 +9,8 @@ namespace bytebank_ADM.Funcionarios
     public class Diretor: Funcionario
     {
 
+        public string Senha { get; set; }
+
         public Diretor(string cpf):base(cpf,5000.0)
         {
         }
@@ -23,6 +25,11 @@ namespace bytebank_ADM.Funcionarios
 
             this.Salario *= 1.15;
 
+        }
+
+        public bool Autenticar(string senha)
+        {
+            return this.Senha == senha;
         }
 
     }
