@@ -72,7 +72,6 @@ void UsarSistema()
     sistema.Logar(ingrid, "123");
     sistema.Logar(ursula, "963");
 
-
 }
 
 UsarSistema();
