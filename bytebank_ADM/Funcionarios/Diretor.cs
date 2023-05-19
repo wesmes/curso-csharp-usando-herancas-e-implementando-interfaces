@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Diretor : Autenticavel
-    {
+    public class Diretor : FuncionarioAutenticavel
+    { 
 
         public Diretor(string cpf):base(cpf,5000.0)
         {
@@ -26,9 +26,5 @@ namespace bytebank_ADM.Funcionarios
 
         }
 
-        public override bool Autenticar(string senha)
-        {
-            return this.Senha == senha;
-        }
     }
 }
